@@ -5,21 +5,52 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.seckill</groupId>
-    <artifactId>seckill-common-parent</artifactId>
+    <artifactId>kf-common-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>../seckill-facade-goods</module>
         <module>../seckill-service-goods</module>
         <module>../seckill-web-frontend</module>
+        <module>../kf-common</module>
+        <module>../kf-common-config</module>
+        <module>../kf-common-core</module>
     </modules>
 
     <properties>
+        <!-- common projects -->
+        <kf-common.version>1.0-SNAPSHOT</kf-common.version>
+        <kf-common-config.version>1.0-SNAPSHOT</kf-common-config.version>
+        <kf-common-core.version>1.0-SNAPSHOT</kf-common-core.version>
+        <kf-common-web.version>1.0-SNAPSHOT</kf-common-web.version>
+
+        <!-- facade projects -->
         <seckill-facade-goods.version>1.0-SNAPSHOT</seckill-facade-goods.version>
+
+        <!-- service projects -->
         <seckill-service-goods.version>1.0-SNAPSHOT</seckill-service-goods.version>
+
+        <!-- web projects -->
         <seckill-web-frontend.version>1.0-SNAPSHOT</seckill-web-frontend.version>
 
+        <!-- app projects -->
+
+        <!-- timer projects -->
+
+        <!-- framework -->
         <org.springframework.version>4.1.7.RELEASE</org.springframework.version>
+        <junit.version>4.11</junit.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <logback.version>1.1.1</logback.version>
+        <mysql.version>5.1.38</mysql.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <mybatis-spring.version>1.2.3</mybatis-spring.version>
+
+        <taglibs.version>1.1.2</taglibs.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <jstl.version>1.2</jstl.version>
+        <jackson-databind.version>2.5.4</jackson-databind.version>
 
         <dubbo.version>2.5.3</dubbo.version>
         <zookeeper.version>3.4.5</zookeeper.version>
@@ -34,7 +65,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
             <!-- 补全项目依赖 -->
@@ -47,63 +78,63 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.12</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.1.1</version>
+                <version>${logback.version}</version>
             </dependency>
             <!--实现slf4j接口并整合-->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.1.1</version>
+                <version>${logback.version}</version>
             </dependency>
             <!--2：数据库相关依赖-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.38</version>
+                <version>${mysql.version}</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>c3p0</groupId>
                 <artifactId>c3p0</artifactId>
-                <version>0.9.1.2</version>
+                <version>${c3p0.version}</version>
             </dependency>
             <!--3：DAO框架：MyBatis依赖-->
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
-                <version>3.3.0</version>
+                <version>${mybatis.version}</version>
             </dependency>
             <!--MyBatis自身实现的spring整合依赖-->
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
-                <version>1.2.3</version>
+                <version>${mybatis-spring.version}</version>
             </dependency>
             <!--Servlet web相关依赖-->
             <dependency>
                 <groupId>taglibs</groupId>
                 <artifactId>standard</artifactId>
-                <version>1.1.2</version>
+                <version>${taglibs.version}</version>
             </dependency>
             <dependency>
                 <groupId>jstl</groupId>
                 <artifactId>jstl</artifactId>
-                <version>1.2</version>
+                <version>${jstl.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>2.5.4</version>
+                <version>${jackson-databind.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>3.1.0</version>
+                <version>${javax.servlet-api.version}</version>
             </dependency>
 
             <!--4: spring依赖-->

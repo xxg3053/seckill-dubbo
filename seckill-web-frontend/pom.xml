@@ -3,20 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>seckill-common-parent</artifactId>
+        <artifactId>kf-common-parent</artifactId>
         <groupId>org.seckill</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../seckill-common-parent/pom.xml</relativePath>
+        <relativePath>../kf-common-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>seckill-web-frontend</artifactId>
+    <groupId>org.seckill</groupId>
+    <version>${seckill-web-frontend.version}</version>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.seckill</groupId>
             <artifactId>seckill-facade-goods</artifactId>
             <version>${seckill-facade-goods.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seckill</groupId>
+            <artifactId>kf-common-config</artifactId>
+            <version>${kf-common-config.version}</version>
         </dependency>
         <!-- 补全项目依赖 -->
 

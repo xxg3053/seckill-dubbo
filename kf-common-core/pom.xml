@@ -10,17 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>seckill-facade-goods</artifactId>
+    <artifactId>kf-common-core</artifactId>
     <groupId>org.seckill</groupId>
-    <version>${seckill-facade-goods.version}</version>
+    <version>${kf-common-core.version}</version>
 
-    <!-- deploy本地
-    <distributionManagement>
-        <repository>
-            <id>localRepository</id>
-            <url>file:/Users/kenfo/.m2/repository</url>
-        </repository>
-    </distributionManagement>
-    -->
 
 </project>

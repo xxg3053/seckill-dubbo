@@ -11,7 +11,7 @@
     <!--1: 配置数据库相关参数
         properties属性：${url}
     -->
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <context:property-placeholder location="classpath:jdbc.properties,classpath:service.properties" />
 
     <!--2：数据库连接池-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

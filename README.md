@@ -65,3 +65,13 @@ seckill-common-config   公共配置工程
 seckill-common-core     公共core工程
 seckill-common-web      公共web工程
 
+**改变工程名称**
+#### 工程结构
+
+### QA
+在seckill-web-frontend模块中使用config模块的配置文件
+```
+<context:property-placeholder location="classpath*:service.properties" />
+
+```
+classpath后面一定要加*，不然会报java.io.FileNotFoundException，找不到service.properties
