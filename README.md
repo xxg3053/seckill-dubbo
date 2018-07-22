@@ -55,4 +55,13 @@ mvn jetty:run
 
 ## zk
 cd /usr/local/zookeeper
-tail -f zookeeper.out  #查看zookeeper是否有服务注册上来
+tail -f zookeeper.out  #查看zookeeper是否有服务注册上来 
+
+
+## v1.0.0
+将工程进行模块服务化
+seckill-common          公共工程
+seckill-common-config   公共配置工程
+seckill-common-core     公共core工程
+seckill-common-web      公共web工程
+
