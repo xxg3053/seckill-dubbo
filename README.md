@@ -33,5 +33,26 @@ dubbo传输需要实现 Serializable
 @Service("seckillService")
 
 ## 运行
-先运行service模块，在运行frontend模块 
-mvn jetty:run 
+1. facade模块，因此执行
+```
+cd /seckill-facade-goodes
+mvn clean
+mvn install 
+
+```
+
+2. service模块  
+由于添加了web.xml，service模块可以使用jetty运行
+```
+mvn jetty:run
+```
+也可以用测试类运行：dubbo.test.DubboProvider 里面的main方法
+
+3. frontend模块    
+```
+mvn jetty:run  
+```
+
+## zk
+cd /usr/local/zookeeper
+tail -f zookeeper.out  #查看zookeeper是否有服务注册上来
